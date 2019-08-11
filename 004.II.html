@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="পালি বাংলা অভিধান">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="css/normaliz.css">
+	<link rel="stylesheet" href="css/main.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	
+	<style type="text/css">
+	.back-link a {
+		color: #4ca340;
+		text-decoration: none; 
+		border-bottom: 1px #4ca340 solid;
+	}
+	.back-link a:hover,
+	.back-link a:focus {
+		color: #408536; 
+		text-decoration: none;
+		border-bottom: 1px #369228 solid;
+	}
+/*	h1 {
+		height: 100%;
+		/* The html and body elements cannot have any padding or margin. 
+		margin: 0;
+		font-size: 14px;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 32px;
+		margin-bottom: 3px;
+	}
+	.entry-header {
+		text-align: left;
+		margin: 0 auto 50px auto;
+		width: 80%;
+        max-width: 978px;
+		position: relative;
+		z-index: 10001;
+	}
+	#demo-content {
+		padding-top: px;
+	}*/
+	body{
+		margin: auto;
+		
+		height:100%;
+		/*background-image: url(icon/homescreen.png);*/
+	    background-repeat: no-repeat;
+	    background-attachment: fixed;
+		background-size: cover;
+		width: 100%;
+
+		}
+		@font-face{
+		font-family:'Adorsholipi';
+		src:url('css/Adorsholipi.ttf');
+		}
+		div #recent4{
+		background:yellow;
+		}
+		@font-face{
+		font-family:'Adorsholipi';
+		src:url('css/Adorsholipi.ttf');
+		}
+		html {
+		font-family: 'Adorsholipi';
+		src: url('css/Adorsholipi.ttf');
+		}
+		body {
+		font-family: 'Adorsholipi';
+		src: url('css/Adorsholipi.ttf');
+		
+		}
+		
+		#searchinput {
+		
+		background-image: url('searchicon.png');
+		background-position: 14px 12px;
+		background-repeat: no-repeat;
+		position:absolute;
+		padding: 1px 15px 1px 15px;
+		border: none;
+		width:190px;
+		margin-left:10px;
+		margin-top:6px;
+		background:#fff;
+		height:36px;
+		outline:none;
+		border-radius:20px;
+		font-size:16px;
+		color:green;
+		font-family: 'Adorsholipi';
+		src: url('css/Adorsholipi.ttf');
+		/*border-left:1px solid red;
+		border-right:1px solid red;
+		overflow-x:hidden;
+		border-bottom:1px solid red;*/
+		}
+		
+		
+		#searchinput:hover  {
+		
+		box-shadow: 1px 2px 10px 8px rgba(0,0,0,0.1);
+		}
+		
+		#navbar{
+		height: 50px;
+		width: 100%;
+		background-color: #00997a;
+		position: fixed;
+		z-index: 120;
+		box-shadow: 1px 4px 16px 1px rgba(0,0,0,0.4);
+		font-family: 'Adorsholipi';
+		src: url('css/Adorsholipi.ttf');
+		}
+		#navbar li{
+		float: left;
+		margin-top:7px;
+		margin-left: 5px;
+		list-style: none;
+		color: white;
+		
+		}
+		
+		#menubtnopen{
+		margin:auto;
+		padding-top:15px;
+		color:#fff;
+		float:right;
+		font-size:0px;
+		height:10px;
+		width:40px;
+		
+		}
+		#mymenu{
+		display: none;
+		float:left;
+		transition:1s;
+		width: 70%;
+		background-color: #eee;
+		z-index:400;
+		height:100%;
+		position:fixed;
+		overflow-x:scroll;
+		margin-left:30%;
+		z-index:140;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		}
+		#mymenu a{
+		top:50px;
+		color:black;
+		float: left;
+		border-bottom: 1px solid #ddd;
+		background:#fff2e6;
+		width:90%;
+		height:45px;
+		text-decoration:none;
+		font-size:18px;
+		padding:2% 0% 0% 0%;
+		text-align:left;
+		position:relative;
+		transition:1.8s;
+		padding-left:10%;
+		}
+		#menubtnclose{
+		margin-left:0px;
+		position:fixed;
+		text-align:center;
+		background:#00997a;
+		height:50px;
+		width:70%;
+		z-index:120;
+		font-size:28px;
+		margin-top:0px;
+		border-style:none;
+		outline:none;
+		
+		
+		}
+		
+		#menubtncloseoutside{
+		top:-50px;
+		position:fixed;
+		height:120%;
+		width:100%;
+		margin-left:-100%;
+		z-index:125;
+		float:left;
+		background:aqua;
+		opacity:.05;
+		
+		}
+		
+		
+		
+		#navbar p{
+		float:right;
+		margin-top:11px;
+		margin-right:15px;
+		list-style: none;
+		font-size:19px;
+		}
+		#navbar p:hover {
+		background-color:gray;
+		}
+		#navbar p a{
+		text-decoration:none}
+		
+		
+		#searchbtn {
+		float:left;
+		margin-left:250px;
+		display:none;
+		position:absolute;
+		border-radius: 10px;
+		margin-top: 5px;
+		}
+		/* Style the word */
+		.list-group{
+		
+		
+		background-color: #f1f1f1;
+		width:100%;
+		float:left;
+		z-index: 110;
+		background:#eee;
+		top:50px;
+		position:absolute;
+		overflow-y:scroll;
+		
+		/*border: 1px solid gray;*/
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		}
+		
+		.list-group a {
+		background-color:#f7f3e5;
+		text-decoration:none;
+		font-size:16px;
+		color:black;
+		float: left;
+		clear:both;
+		height:30px;
+		outline: none;
+		cursor: pointer;
+		padding: 10px 10px 10px 20px;
+		transition: 0.s;
+		width:91%;
+		border-bottom: 1px solid gray;
+		}
+		
+		.list-group a:hover {
+		background-color: #ddd;
+		width:91%;
+		}
+		
+		.list-group a.active {
+		background-color: #ccc;
+		}
+		
+		#searchlist{
+		
+		display:none;
+		}
+		#listcontent {
+		display:none;
+		height:100%;
+		width:100%;
+		background:#f8f0e7;
+		margin-left:0%;
+		top:55px;
+		position: fixed;
+		/* background-repeat:no-repeat; */
+		overflow-y:scroll;
+		box-shadow: 1px 1px 10px 7px rgba(0,110,50,0.2);
+		}
+		
+		#listcontent a{
+		
+		color:black;
+		float: left;
+		border: 1.5px solid #ddd;
+		text-decoration:none;
+		font-size:18px;
+		text-align:left;
+		position:relative;
+		background:inherit;
+		height:5%;
+		margin:auto;
+		padding-top: 5px;
+		margin:10px 1% 0px 2%;
+		color:black;
+		width:29%;
+		text-align: center;
+		}
+		#listcontent a:hover{
+		background: aqua;
+		}
+		#error{
+		color:red;
+		font-size:15px;
+		text-align:center;
+		margin-left:-10px;
+		}
+		
+		.pic {
+		display:none;
+		z-index:400;
+		position:fixed;
+		overflow:scroll;
+		overflow-y:scroll;
+		width:100%;
+		height:100%;
+		}
+		.pic img{
+		position:relative;
+		top:42px;
+		width:100%;
+		}
+		#pnav h1{
+		display: none;
+		}
+		#pnav{
+		height:50px;
+		width:100%;
+		background:#00997a;
+		z-index:600;
+		position:fixed;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+		}
+		#pnav p{
+		margin-top:5px;
+		width:40px;
+		font-size:35px;
+		float:left;
+		position:relative;
+		text-align:center;
+		margin-left:17%;
+		line-height:30px;
+		
+		color: white;
+		border-radius: 7px;
+		}
+		#pnav p:hover {
+		background:aqua;
+		color:gray;
+		}
+		
+		@media screen and (min-width: 490px){
+		
+		#searchinput{
+		width:190px;
+		}
+		
+		.list-group{
+		width:31%;
+		
+		}
+		
+		.pic{
+		width:68%;
+		float:right;
+		margin-left:32%;
+		
+		}
+		/*a span{
+		margin-top: -10px;
+		background:#f7f3e5;
+		margin-left: -5%;
+		position: fixed;
+		text-align: center;
+		height: 60px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		width: 105%;
+		
+		}
+		span{
+		padding-top: 25px;
+		}*/
+		
+		#pnav h1{
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		margin-left: -66%;
+		background-color: red;
+		margin-top:45px; 
+		display: block;
+		opacity: 0.1;
+		}
+		#pnav{
+		
+		height:50px;
+		margin-left:-35%;
+		z-index:150;
+		width:120%;
+		}
+		#pnav p{
+		margin-left:20%;
+		border-left:none;
+		z-index: 200;
+		
+		}
+		
+		}
+		
+		@media screen and (max-width: 350px){
+		
+		#searchinput {
+		width: 150px;
+		font-size: 12px;
+		}
+		
+		#searchbtn {
+		margin-left: 170px;
+		height: 32px;
+		width: 32px;
+		margin-top: 8px;
+		}
+		#pnav p{
+		margin-left:15%;
+		}
+		
+		}
+		@media screen and (max-height: 470px){
+		.pic{
+		width:100%;
+		float:right;
+		margin-left: 0%;
+		background-color: white;
+		
+		}
+		#listcontent{
+		height: 85%;
+		}
+		
+		#listcontent a{
+		text-align: center;
+		color:black;
+		float: left;
+		border: 1.5px solid #ddd;
+		text-decoration:none;
+		font-size:16px;
+		position:relative;
+		height: 14%;
+		margin:1% 1% 1% 10.5%;
+		width:18%;
+		}
+		
+		.pic img{
+		width: 100%;
+		
+		}
+		#pnav h1{
+		display: none;
+		}
+		#pnav{
+		
+		height:50px;
+		margin-left:0%;
+		z-index:150;
+		width:100%;
+		}
+		
+		}
+	</style>
+</head>
+<body class="demo">
+
+
+	<!-- Demo content -->			
+	<div id="demo-content">
+		
+
+		<!--<header class="entry-header">
+
+			<nav class="back-link">
+			</nav><!-.nav-single 
+
+			<h1 class="entry-title"></h1>
+		</header> -->
+
+		<div id="loader-wrapper">
+			<div id="loader"></div>
+			<div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+
+		</div>
+		
+		<div id="navbar">
+			<li id="icon"><img  width="35px" height="35px" src="icon/icons.png"></li>
+			<input onclick="searchclose(), searchbtnopen(), listcontentsizeb(), listcontentsizesww()" class="form-control" id="searchinput" type="search" placeholder="ঈ তে খোঁজ করুন" value="" />
+			<img id="searchbtn"  onclick="searchopen(), listcontentsizes(), listcontentsizesw()" src="icon/search.png" height="37px" width="37px">
+			<div id="menubtnopen" onclick="menuopen()"><img height="18px" width="23px"   src="icon/menu.png"></div>
+			</div>
+	
+	
+			<div id="mymenu">
+			<h1 href="" id="menubtncloseoutside" onclick="menuclose()" ></h1>
+			<p id="menubtnclose" onclick="menuclose()" >×</p>
+			<div id="id01"></div>
+			<script src="js/index.js"></script>
+		</div>
+	
+
+<!--pic content-->
+
+<div class="pic" id="p322"><div id="pnav"> <p onclick="op321b(),cp322()">« </p> <h1 onclick="cp322()"></h1> <p onclick="cp322()">× </p> <p onclick="op322b(),cp322()">»</p></div> <img src="file:///sdcard/.pbd/322.png"> </div> 
+<div class="pic" id="p322b"><div id="pnav"> <p onclick="op322(),cp322b()">« </p> <h1 onclick="cp322b()"></h1> <p onclick="cp322b()">× </p> <p onclick="op323(),cp322b()">»</p></div> <img src="file:///sdcard/.pbd/322b.png"> </div> 
+<div class="pic" id="p323"><div id="pnav"> <p onclick="op322b(),cp323()">« </p> <h1 onclick="cp323()"></h1> <p onclick="cp323()">× </p> <p onclick="op323b(),cp323()">»</p></div> <img src="file:///sdcard/.pbd/323.png"> </div> 
+<div class="pic" id="p323b"><div id="pnav"> <p onclick="op323(),cp323b()">« </p> <h1 onclick="cp323b()"></h1> <p onclick="cp323b()">× </p> <p onclick="op324(),cp323b()">»</p></div> <img src="file:///sdcard/.pbd/323b.png"> </div> 
+
+<script src="js/picturescall.js"></script>
+		<!-- word links -->
+
+<div onclick="searchbtnclose()" id="searchlist" class="list-group">
+	<a class="wli" onclick="op322()">ঈ</a>
+<a class="wli" onclick="op322()">ঈঘ</a>
+<a class="wli" onclick="op322()">ঈতি</a>
+<a class="wli" onclick="op322()">ঈতি উপদ্দব</a>
+<a class="wli" onclick="op322()">ঈতিক</a>
+<a class="wli" onclick="op322()">ঈতিহ</a>
+<a class="wli" onclick="op322b()">ঈতী</a>
+<a class="wli" onclick="op322b()">ঈদিস</a>
+<a class="wli" onclick="op322b()">ঈরতি</a>
+<a class="wli" onclick="op322b()">ঈরিণ</a>
+<a class="wli" onclick="op322b()">ঈরিত</a>
+<a class="wli" onclick="op322b()">ঈরেতি</a>
+<a class="wli" onclick="op323()">ঈস</a>
+<a class="wli" onclick="op323()">ঈসক</a>
+<a class="wli" onclick="op323()">ঈসকং</a>
+<a class="wli" onclick="op323()">ঈসকং পি</a>
+<a class="wli" onclick="op323()">ঈসকগ্গ</a>
+<a class="wli" onclick="op323()">ঈসধর</a>
+<a class="wli" onclick="op323()">ঈস-হসন</a>
+<a class="wli" onclick="op323()">ঈসা </a>
+<a class="wli" onclick="op323()">ঈসাক</a>
+<a class="wli" onclick="op323b()">ঈসাদন্ত</a>
+<a class="wli" onclick="op323b()">ঈসামুখ</a>
+<a class="wli" onclick="op323b()">ঈসামূলং</a>
+<a class="wli" onclick="op323b()">ঈসী</a>
+<a class="wli" onclick="op323b()">ঈহতি</a>
+<a class="wli" onclick="op323b()">ঈহা</a>
+	
+</div>
+
+	</div><!-- /Demo content -->
+	<div id="listcontent"></div>
+<script>
+function myFunction_list(arr) {
+  var out = "";
+  var i;
+  for(i = 0; i<arr.length; i++) {
+  out += '<a href="' + arr[i].url + '" onclick="' + arr[i].onclick + '"  id="'+arr[i].id + '">'  + arr[i].display + '</a>';
+  }
+  document.getElementById("listcontent").innerHTML = out;
+  }
+</script>
+<script src="js/letter.js"></script>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+		<script src="js/main.js"></script>
+
+<script src="jquery-1.11.0.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="bootstrap-list-filter.src.js"></script>
+<script>
+$('#searchlist').btsListFilter('#searchinput', {
+});
+</script>
+
+<script type="text/javascript">
+		function myFunction(arr) {
+		var out = "";
+		var i;
+		for(i = 0; i<arr.length; i++) {
+		out += '<a  href="' + arr[i].src + '">' + arr[i].display + '</a><br>';
+		}
+		document.getElementById("id01").innerHTML = out;
+		}
+		</script>
+		<script src="js/letterlist.js"></script>
+		
+
+		</body>
+		</html>
