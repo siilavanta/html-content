@@ -1,0 +1,2 @@
+//one line after enter replace by regular expression code
+\s\n
