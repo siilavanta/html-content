@@ -1,0 +1,9 @@
+<div data-role="page" id="p1">
+<a href="#p2">goto page 2</a> and then use browser's navigation.</div>
+<div data-role="page" id="p2">Page 2</div>
+<script>
+window.addEventListener("hashchange", function(e) {
+    if(e.oldURL.length > e.newURL.length)
+        alert("back")
+});
+</script>
